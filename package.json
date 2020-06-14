@@ -1,0 +1,87 @@
+{
+  "name": "sfid-admin",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint:vue": "vue-cli-service lint",
+    "lint:ts": "tslint --fix --project tsconfig.json --config tslint.json"
+  },
+  "dependencies": {
+    "@tinymce/tinymce-vue": "^3.0.1",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.2.2",
+    "core-js": "^2.6.5",
+    "echarts": "^4.4.0",
+    "element-ui": "^2.12.0",
+    "js-cookie": "^2.2.1",
+    "moment": "^2.24.0",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "path": "^0.12.7",
+    "qs": "^6.9.0",
+    "quasar": "^1.6.1",
+    "reflect-metadata": "^0.1.13",
+    "register-service-worker": "^1.6.2",
+    "style-resources-loader": "^1.2.1",
+    "tiptap": "^1.26.6",
+    "tiptap-extensions": "^1.28.6",
+    "tsyringe": "^3.4.0",
+    "v-markdown-editor": "^1.1.9",
+    "vue": "^2.6.10",
+    "vue-awesome": "^3.5.4",
+    "vue-class-component": "^7.0.2",
+    "vue-count-to": "^1.0.13",
+    "vue-file-base64": "^1.0.2",
+    "vue-json-excel": "^0.2.98",
+    "vue-multiselect": "^2.1.6",
+    "vue-notification": "^1.3.20",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.3",
+    "vue-template-loader": "^1.0.0",
+    "vue-tinymce-editor": "^1.6.2",
+    "vue2-notify": "^1.4.0",
+    "vuelidate": "^0.7.4",
+    "vuelidate-property-decorators": "^1.0.28",
+    "vuex": "^3.0.1",
+    "vuex-module-decorators": "^0.10.1",
+    "webpack-stream": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/echarts": "^4.4.0",
+    "@types/js-cookie": "^2.2.3",
+    "@types/qs": "^6.5.3",
+    "@vue/cli-plugin-babel": "^3.12.0",
+    "@vue/cli-plugin-pwa": "^3.12.0",
+    "@vue/cli-plugin-typescript": "^3.12.0",
+    "@vue/cli-service": "^3.12.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.3",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "lint-staged": {
+    "src/*": [
+      "node_modules/.bin/prettier --config .prettierrc --write src/**/*.vue",
+      "node_modules/.bin/prettier --config .prettierrc --write src/**/*.ts"
+    ],
+    "*.ts": [
+      "npm run lint:ts"
+    ],
+    "*.vue": [
+      "npm run lint:vue"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
